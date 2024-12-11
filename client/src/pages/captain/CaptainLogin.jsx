@@ -27,7 +27,7 @@ const CaptainLogin = () => {
       setCaptain(response.data.captain);
       localStorage.setItem('token',response.data.token)
       setErrorMessage('')
-      navigate('/')
+      navigate('/captain-home')
       
     }
     setEmail('');
