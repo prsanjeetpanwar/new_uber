@@ -9,6 +9,7 @@ dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import connectToDb from './db/db.js';
+import MapRouter from './routes/maps.routes.js';
 
 const app = express();
 
@@ -26,5 +27,6 @@ app.get('/', (req, res) => {
 
 app.use('/v1/user',UseRouter)
 app.use('/v1/captain',CaptainRouter)
+app.use('/v1/maps',MapRouter)
 
 export default app;
